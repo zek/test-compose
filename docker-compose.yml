@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  dockerregistrymirror:
+    image: registry:2
+    ports:
+      - "443:443"
+    volumes:
+      - ./data/docker/var/lib/registry:/var/lib/registry
+    restart: always
